@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #f6f9fc 0%, #e9f2fa 100%);
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    padding: 20px 50px;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 700;
+    color: #007bff;
+}
+
+nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+.main {
+    margin: 0;
+    padding: 0;
+    padding-top: 80px;
+}
+
+.page {
+    background: linear-gradient(135deg, #c9dff0 0%, #b9d5eb 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.page::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 123, 255, 0.1);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.page::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(0, 123, 255, 0.137);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.faq-cont {
+    max-width: 800px;
+    width: 90%;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #007bff;
+    text-align: center;
+}
+
+.question {
+    margin-bottom: 30px;
+}
+
+.question h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.question p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #4a4a4a;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-cont {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-sec {
+    flex: 1;
+    margin: 20px;
+    min-width: 200px;
+}
+
+.footer-sec h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.footer-sec ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-sec ul li {
+    margin-bottom: 10px;
+}
+
+.footer-sec ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-sec ul li a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #555;
+    margin-top: 20px;
+}
+/* responsive karaycha hota pan zala nahi */
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    .main {
+        padding-top: 160px;
+    }
+
+    .faq-cont {
+        padding: 30px;
+    }
+}

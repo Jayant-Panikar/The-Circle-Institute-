@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    font-family: 'Roboto', Arial, sans-serif;
+    scroll-behavior: smooth;
+    color: #333;
+    line-height: 1.6;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    padding: 20px 50px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 700;
+    color: #007bff;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+.ls-ignore{
+    position: relative;
+}
+
+.main{
+    margin:0;
+    padding:0;
+}
+
+#home {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#bg-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+}
+
+#home .content {
+    background-color: transparent;
+    box-shadow: none;
+    text-align: center;
+}
+
+#home h2 {
+    color: white;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 24px;
+    color: white;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cont {
+    max-width: 1000px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+}
+
+#overview {
+    background: linear-gradient(135deg, #f6f9fc 0%, #e9f2fa 100%);
+}
+
+#mission {
+    background: linear-gradient(135deg, #e9f2fa 0%, #d9e8f5 100%);
+}
+
+#vision {
+    background: linear-gradient(135deg, #d9e8f5 0%, #c9dff0 100%);
+}
+
+#highlights {
+    background: linear-gradient(135deg, #c9dff0 0%, #b9d5eb 100%);
+}
+
+#achievements {
+    background: linear-gradient(135deg, #b9d5eb 0%, #a9cce6 100%);
+}
+
+#testimonials {
+    background: linear-gradient(135deg, #a9cce6 0%, #99c2e1 100%);
+}
+
+h2 {
+    font-size: 50px;
+    margin-bottom: 30px;
+    color: black;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: #007bff;
+}
+
+h3 {
+    font-size: 28px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #3f3f3f;
+}
+
+#highlights ul, #achievements ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+#highlights li, #achievements li {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+#highlights li:hover, #achievements li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+#highlights li strong, #achievements li strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #007bff;
+}
+
+/* Testimonial Styles */
+#testimonials .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#testimonials blockquote {
+    font-style: italic;
+    border-left: 5px solid #007bff;
+    padding: 20px 30px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin: 30px 0;
+    position: relative;
+    max-width: 800px;
+}
+
+#testimonials blockquote::before {
+    content: '"';
+    font-size: 60px;
+    color: #007bff;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+    opacity: 0.2;
+}
+
+#testimonials blockquote footer {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: right;
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+    min-height: auto;
+    display: block;
+}
+
+.page::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 123, 255, 0.1);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.page::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(0, 123, 255, 0.05);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+ footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-cont {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-sec {
+    flex: 1;
+    margin: 20px;
+    min-width: 200px;
+}
+
+.footer-sec h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.footer-sec ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-sec ul li {
+    margin-bottom: 10px;
+}
+
+.footer-sec ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-sec ul li a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #555;
+    margin-top: 20px;
+}
+/* responsive karaycha hota pan zala nahi */
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    nav ul {
+        margin-top: 20px;
+    }
+    
+    nav ul li {
+        margin-left: 15px;
+    }
+
+    .page {
+        padding: 80px 20px;
+    }
+
+    .content {
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    #home h2 {
+        font-size: 36px;
+    }
+
+    #home p {
+        font-size: 20px;
+    }
+
+    #highlights ul, #achievements ul {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        margin: 10px 0;
+    }
+}
